@@ -36,7 +36,7 @@ namespace MobileApp
 
                     string pathCoolDown = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "coolDown");
                     TransferCreatedDB(pathCoolDown, "coolDownExs.db");
-                    bankExercises = new BankExercises(pathBasicEx, pathWarmUp, pathCoolDown, !File.Exists(pathBasicEx));
+                    bankExercises = new BankExercises(pathBasicEx, pathWarmUp, pathCoolDown, true);
                 }
                 return bankExercises;
             }

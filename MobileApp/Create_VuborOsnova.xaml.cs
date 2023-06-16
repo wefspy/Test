@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MobileApp.Osnova;
+using Rg.Plugins.Popup.Services;
 
 namespace MobileApp
 {
@@ -32,7 +33,9 @@ namespace MobileApp
         }
         private async void CreatePopUpCard(object sender, EventArgs e)
         {
-            var a = (CardEx)BindingContext;
+            Button button = (Button)sender;
+            int parameter = int.Parse(button.CommandParameter.ToString());
+            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetBasicExercise(parameter)));
         }
         private void ImageButton_Clicked(object sender, EventArgs e)
         {

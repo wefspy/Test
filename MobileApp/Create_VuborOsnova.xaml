@@ -29,7 +29,7 @@
                                                 </Grid>
                                             </StackLayout>
                                         </Frame>
-                                        <Button BindingContext="{Binding CardEx}" BackgroundColor="Transparent" CornerRadius="20" 
+                                        <Button CommandParameter="{Binding ID}" BackgroundColor="Transparent" CornerRadius="20" 
                                                 Clicked="CreatePopUpCard"/>
                                     </Grid>
                                 </DataTemplate>

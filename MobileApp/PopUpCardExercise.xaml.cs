@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MobileApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PopUpCardExercise : ContentPage
+    public partial class PopUpCardExercise : Rg.Plugins.Popup.Pages.PopupPage
     {
-        public PopUpCardExercise()
+        public PopUpCardExercise(CardExercise cardExercise)
         {
             InitializeComponent();
         }
