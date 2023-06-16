@@ -34,7 +34,7 @@ namespace MobileApp
         {
             Button button = (Button)sender;
             int parameter = int.Parse(button.CommandParameter.ToString());
-            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetBasicExercise(parameter), CurDay, CurWeek));
+            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetBasicExercise(parameter), CurDay, CurWeek, ExType.Osnova));
         }
         private void ImageButton_Clicked(object sender, EventArgs e)
         {

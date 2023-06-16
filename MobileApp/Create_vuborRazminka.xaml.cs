@@ -30,7 +30,7 @@ namespace MobileApp
         {
             Button button = (Button)sender;
             int parameter = int.Parse(button.CommandParameter.ToString());
-            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetWarnUpExercise(parameter), CurDay, CurWeek));
+            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetWarnUpExercise(parameter), CurDay, CurWeek, ExType.Razminka));
         }
     }
 }

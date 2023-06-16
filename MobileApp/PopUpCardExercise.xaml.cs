@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,23 +15,29 @@ namespace MobileApp
     {
         int CurDay;
         int CurWeek;
-        public PopUpCardExercise(CardExercise cardExercise, int day, int week)
+        CardExercise cardExercise;
+        ExType exType;
+        public PopUpCardExercise(CardExercise cardExercise, int day, int week, ExType exType)
         {
             InitializeComponent();
+            CurDay = day;
+            CurWeek = week;
+            this.cardExercise = cardExercise;
+            this.exType = exType;
             Name.Text = cardExercise.Name;
             GIF.Source = cardExercise.GIF;
             Description.Text = cardExercise.Description;
         }
 
-        public void AddExerciseButton(object sender, EventArgs e)
+        public async void AddExerciseButton(object sender, EventArgs e)
         {
             Exercise exercise = new Exercise
             {
-                Anim = "gifen_pushups.gif",
-                Image = "pushups_classic",
+                Name = cardExercise.Name,
                 Day = CurDay,
                 Week = CurWeek,
-                ExType = ExType.Osnova,
+                ExType = exType,
+                GIF = cardExercise.GIF,
                 NumberApproaches = CountApproaches.Text.Trim(),
                 NumberRepetitions = CountRepetitions.Text.Trim(),
                 Time = int.Parse(Time.Text.Trim())
@@ -40,6 +47,7 @@ namespace MobileApp
             CountApproaches.Text = "";
             CountRepetitions.Text = "";
             Time.Text = "";
+            await PopupNavigation.Instance.PopAsync();
         }
     }
 }
