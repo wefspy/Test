@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Create_vuborZaminka">
+    <ScrollView>
+        <StackLayout BackgroundColor="LightGray">
+            <Frame BackgroundColor="White" CornerRadius="20" Margin="5,10,5,0">
+                <StackLayout>
+                    <Label Text="Заминка" HorizontalOptions="Center" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+                    <ImageButton x:Name="ruki_nadgolovoi" Source="ruki_nadgolovoi" BackgroundColor="#FFFFFF" Clicked="Opis3_1"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="ruki_vsoronu" Source="ruki_vsoronu" BackgroundColor="#FFFFFF" Clicked="Opis3_2"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_back" Source="taga_back" BackgroundColor="#FFFFFF" Clicked="Opis3_3"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_grud" Source="taga_grud" BackgroundColor="#FFFFFF" Clicked="Opis3_4"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_kisti" Source="taga_kisti" BackgroundColor="#FFFFFF" Clicked="Opis3_5"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_nogi" Source="taga_nogi" BackgroundColor="#FFFFFF" Clicked="Opis3_6"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_povorot" Source="taga_povorot" BackgroundColor="#FFFFFF" Clicked="Opis3_7"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_triceps" Source="taga_triceps" BackgroundColor="#FFFFFF" Clicked="Opis3_8"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="taga_yagodichi" Source="taga_yagodichi" BackgroundColor="#FFFFFF" Clicked="Opis3_9"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="child_pose" Source="child_pose" BackgroundColor="#FFFFFF" Clicked="Opis3_10"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

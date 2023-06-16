@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Zaminka.Opis3_6">
+    <ScrollView>
+        <StackLayout BackgroundColor="LightGray">
+            <Frame BackgroundColor="White" CornerRadius="20" Margin="5,10,5,0">
+                <StackLayout>
+                    <Label Text="Растяжка квадрицепса" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+                    <Label Text="лежа на животе" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+                    <Image Source="png5_taganogi" HeightRequest="200"/>
+                    <Label Text="Описание: Лягте на живот, вытяните позвоночник в прямую линию, а лбом упритесь в пол (коврик). Поднимите одну голень наверх, когда доведете до перпендикуляра, схватите ее за голеностоп руками. Притяните максимально к ягодицам." TextColor="Black" FontSize="18" Margin="0,10,0,0"/>
+                    <Entry x:Name="podhodHolder" Placeholder="кол-во подходов" />
+                    <Entry x:Name="povtorHolder" Placeholder="кол-во повторений"/>
+                    <Entry x:Name="timeHolder" Placeholder="время одного подхода"/>
+                    <Label Text="(выполните несколько подходов и расчитайте среднее время в секундах)" FontAttributes="Italic"/>
+                    <Button Text="Добавить" FontSize="20" FontAttributes="Bold"
+                            CornerRadius="20" BackgroundColor="#1B8DEB" Clicked="AddExerciseButton" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

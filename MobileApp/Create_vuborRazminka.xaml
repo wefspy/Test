@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Create_vuborRazminka">
+    <ScrollView>
+        <StackLayout BackgroundColor="LightGray">
+            <Frame BackgroundColor="White" CornerRadius="20" Margin="5,10,5,0">
+                <StackLayout>
+                    <Label Text="Разминка" HorizontalOptions="Center" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+                    <ImageButton x:Name="vrash_golova" Source="vrash_golova" BackgroundColor="#FFFFFF" Clicked="Opis1_1"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_plechi" Source="vrash_plechi" BackgroundColor="#FFFFFF" Clicked="Opis1_2"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_plechi2" Source="vrash_plechi2" BackgroundColor="#FFFFFF" Clicked="Opis1_3"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_kisti" Source="vrash_kisti" BackgroundColor="#FFFFFF" Clicked="Opis1_4"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_predplechi" Source="vrash_predplechi" BackgroundColor="#FFFFFF" Clicked="Opis1_5"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_korpus" Source="vrash_korpus" BackgroundColor="#FFFFFF" Clicked="Opis1_6"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="golen_yagodichi" Source="golen_yagodichi" BackgroundColor="#FFFFFF" Clicked="Opis1_7"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="bedro_korpus" Source="bedro_korpus" BackgroundColor="#FFFFFF" Clicked="Opis1_8"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="imitation" Source="imitation" BackgroundColor="#FFFFFF" Clicked="Opis1_9"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="vrash_taz" Source="vrash_taz" BackgroundColor="#FFFFFF" Clicked="Opis1_10"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+                    <ImageButton x:Name="machi" Source="machi" BackgroundColor="#FFFFFF" Clicked="Opis1_11"
+                                 CornerRadius="20" Aspect="AspectFill" Padding="0,5,0,0"/>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
