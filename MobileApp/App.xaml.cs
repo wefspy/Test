@@ -29,13 +29,13 @@ namespace MobileApp
                 if (bankExercises == null)
                 {
                     string pathBasicEx = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "basicExercises");
-                    TransferCreatedDB(pathBasicEx, "basic.db");
+                    TransferCreatedDB(pathBasicEx, "basicExs.db");
 
                     string pathWarmUp = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "warmUp");
-                    TransferCreatedDB(pathWarmUp, "warmUp.db");
+                    TransferCreatedDB(pathWarmUp, "warmUpExs.db");
 
                     string pathCoolDown = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "coolDown");
-                    TransferCreatedDB(pathCoolDown, "coolDown.db");
+                    TransferCreatedDB(pathCoolDown, "coolDownExs.db");
                     bankExercises = new BankExercises(pathBasicEx, pathWarmUp, pathCoolDown, !File.Exists(pathBasicEx));
                 }
                 return bankExercises;

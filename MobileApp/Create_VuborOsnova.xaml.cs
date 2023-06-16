@@ -30,6 +30,10 @@ namespace MobileApp
             ChestCollection.ItemsSource = App.BankEx.GetBasicExercisesByType(PartBody.Chest);
             BackCollection.ItemsSource = App.BankEx.GetBasicExercisesByType(PartBody.Back);
         }
+        private async void CreatePopUpCard(object sender, EventArgs e)
+        {
+            var a = (CardEx)BindingContext;
+        }
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             hands.IsVisible = true;
