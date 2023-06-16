@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using MobileApp.Razminka;
+using Rg.Plugins.Popup.Services;
 
 namespace MobileApp
 {
@@ -22,50 +22,15 @@ namespace MobileApp
             CurWeek = week;
         }
 
-        private async void Opis1_1(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            await Navigation.PushAsync(new Opis1_1(CurDay, CurWeek));
+            warmUpCollection.ItemsSource = App.BankEx.GetWarmUp();
         }
-        private async void Opis1_2(object sender, EventArgs e)
+        private async void CreatePopUpCard(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Opis1_2(CurDay, CurWeek));
+            Button button = (Button)sender;
+            int parameter = int.Parse(button.CommandParameter.ToString());
+            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetWarnUpExercise(parameter), CurDay, CurWeek));
         }
-        private async void Opis1_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_3(CurDay, CurWeek));
-        }
-        private async void Opis1_4(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_4(CurDay, CurWeek));
-        }
-        private async void Opis1_5(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_5(CurDay, CurWeek));
-        }
-        private async void Opis1_6(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_6(CurDay, CurWeek));
-        }
-        private async void Opis1_7(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_7(CurDay, CurWeek));
-        }
-        private async void Opis1_8(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_8(CurDay, CurWeek));
-        }
-        private async void Opis1_9(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_9(CurDay, CurWeek));
-        }
-        private async void Opis1_10(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_10(CurDay, CurWeek));
-        }
-        private async void Opis1_11(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis1_11(CurDay, CurWeek));
-        }
-
     }
 }

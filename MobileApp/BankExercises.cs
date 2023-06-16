@@ -55,6 +55,10 @@ namespace MobileApp
             return coolDown.Table<CardExercise>()
                 .ToList();
         }
+        public CardExercise GetCoolDownExercise(int id)
+        {
+            return coolDown.Find<CardExercise>(id);
+        }
 
         private void CreateBank()
         {

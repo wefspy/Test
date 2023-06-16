@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using MobileApp.Osnova;
 using Rg.Plugins.Popup.Services;
 
 namespace MobileApp
@@ -35,7 +34,7 @@ namespace MobileApp
         {
             Button button = (Button)sender;
             int parameter = int.Parse(button.CommandParameter.ToString());
-            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetBasicExercise(parameter)));
+            await PopupNavigation.Instance.PushAsync(new PopUpCardExercise(App.BankEx.GetBasicExercise(parameter), CurDay, CurWeek));
         }
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
@@ -99,78 +98,6 @@ namespace MobileApp
             back.IsVisible = false;
             back_create.IsVisible = true;
             back_back.IsVisible = false;
-        }
-        private async void Opis2_1_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_1_1(CurDay, CurWeek));
-        }
-        private async void Opis2_1_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_1_2(CurDay, CurWeek));
-        }
-        private async void Opis2_1_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_1_3(CurDay, CurWeek));
-        }
-        private async void Opis2_1_4(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_1_4(CurDay, CurWeek));
-        }
-        private async void Opis2_2_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_2_1(CurDay, CurWeek));
-        }
-        private async void Opis2_2_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_2_2(CurDay, CurWeek));
-        }
-        private async void Opis2_2_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_2_3(CurDay, CurWeek));
-        }
-        private async void Opis2_2_4(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_2_4(CurDay, CurWeek));
-        }
-        private async void Opis2_3_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_3_1(CurDay, CurWeek));
-        }
-        private async void Opis2_3_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_3_2(CurDay, CurWeek));
-        }
-        private async void Opis2_3_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_3_3(CurDay, CurWeek));
-        }
-        private async void Opis2_3_4(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_3_4(CurDay, CurWeek));
-        }
-        private async void Opis2_4_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_4_1(CurDay, CurWeek));
-        }
-        private async void Opis2_4_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_4_2(CurDay, CurWeek));
-        }
-        private async void Opis2_5_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_5_1(CurDay, CurWeek));
-        }
-        private async void Opis2_5_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_5_2(CurDay, CurWeek));
-        }
-        private async void Opis2_5_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_5_3(CurDay, CurWeek));
-        }
-        private async void Opis2_5_4(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Opis2_5_4(CurDay, CurWeek));
         }
     }
 }
